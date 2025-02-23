@@ -7,6 +7,7 @@ import Process from "../components/Process/Process";
 import TestimonialSlider from "../components/Reviews/TestimonialSlider";
 import MarqueeSlider from "../components/Test";
 import TeamSection from "../components/Meet Our Top-Notch Experts";
+import Test from "../components/Test";
 
 function Home() {
   return (
@@ -16,6 +17,8 @@ function Home() {
       <Process />
       <TestimonialSlider />
       <TeamSection/>
+      <Test/>
+      
     </>
   );
 }

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import manImage from '../assets/istockphoto-1494356205-612x612__1_-removebg-preview.png';        // Replace with your man image
 import wireframeImage from '../assets/gdl_air_systems_cover.png'; // Replace with your wireframe image
 
-// The overall container
 const Section = styled.section`
   display: flex;
   width: 100%;
@@ -14,7 +13,6 @@ const Section = styled.section`
   }
 `;
 
-// Left half with text
 const LeftColumn = styled.div`
 display:flex;
 margin-left:50px;

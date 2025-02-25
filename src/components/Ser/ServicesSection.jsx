@@ -171,6 +171,7 @@ const servicesData = [
     imgSrc: img,
     description:
       "Planning, 3D Visualization, Landscape Design, Structural Drawing, CGI, Construction Supervision",
+      href:'Architecture'
   },
   {
     id: 2,
@@ -179,21 +180,28 @@ const servicesData = [
     imgSrc: img2,
     description:
       "Interior Design, Exterior Design, Renovation, Sustainable Design, Installation, Plumbing System, 3D Experience",
+      href:'InteriorandExteriorDesign'
+
   },
   {
     id: 3,
     iconClass: "la la-bed",
-    title: "Furniture Productions",
+    title: "Project Management",
     imgSrc: img3,
     description:
       "Bespoke Furniture, Material Supply, Online Store, Distribute, 3D Modeling",
+            href:'ProjectManagement'
+
+
   },
   {
     id: 4,
     iconClass: "la la-comments",
-    title: "Project Consulting & Supervisor",
+    title: "Engineering Consultancy",
     imgSrc: img,
     description: "Project Analysis, Bid Documentation, Construction Supervisor",
+    href:'EngineeringConsulting'
+
   },
 ];
 
@@ -206,7 +214,7 @@ const ServicesSection = () => {
         </TitleWrapper>
         <ServicesGrid>
           {servicesData.map((service) => (
-            <ServiceCard href="#" key={service.id}>
+            <ServiceCard href={service.href} key={service.id}>
               <div className="icon">
                 <i className={service.iconClass}></i>
               </div>

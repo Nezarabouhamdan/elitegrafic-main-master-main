@@ -69,13 +69,19 @@ const ResponsiveImage = styled.img`
     width: 80%;
     height: auto;
   }
+`;export const Head = styled.p`
+margin-top:20px;font-size:30px;
+@media (max-width: 768px) {
+margin-top:30px;font-size:18px;
+
+}
 `;
 function Faqs(){
   return (
 <>   <Herosection>
     <Heroimg src={img2}/>
-    <p style={{marginTop:'20px',fontSize:'30px'}}>Frequently Asked Questions
-    </p>
+    <Head >Frequently Asked Questions
+    </Head>
    </Herosection>
    <Section><Row>
     <OurProcessWork panels={Faqdata}  button={false}/>

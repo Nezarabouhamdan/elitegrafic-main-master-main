@@ -3,16 +3,14 @@
 import * as React from "react";
 import styled from "styled-components";
 
-interface CTAButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-}
+
 
 const StyledButton = styled.button`
   display: flex;
   align-items: center;
   gap: 15px;
   justify-content: center;
+  z-index:1;
   border-radius: 20px;
   background-color: rgba(102, 161, 9, 1);
   padding: 11px 25px;
@@ -54,9 +52,9 @@ const ButtonIcon = styled.img`
   flex-shrink: 0;
 `;
 
-export const CTAButton: React.FC<CTAButtonProps> = ({ children, onClick }) => {
+export const CTAButton = ({ children, onClick }) => {
   return (
-    <StyledButton onClick={onClick} aria-label="Contact us">
+    <StyledButton  aria-label="Contact us">
       <ButtonText>{children}</ButtonText>
       <ButtonIcon
         loading="lazy"

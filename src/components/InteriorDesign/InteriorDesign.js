@@ -4,16 +4,16 @@ import styled from "styled-components";
 import { StatItem } from "./StatItem";
 import { ImageSection } from "./ImageSection";
 
-const InteriorDesign = () => {
+const InteriorDesign = ({data}) => {
   return (
     <MainContainer>
       <ContentSection>
-        <Title>Interior Design</Title>
+        <Title> 
+          {data[0].title}
+           </Title>
         <Description>
-          Step into a world where the art of Interior Design is meticulously
-          crafted to bring together timeless elegance and cutting-edge modern
-          Innovation, Allowing you to transform your living spaces into the
-          epitome of luxury and sophistication
+        {data[0].description}
+
         </Description>
         <StartProjectButton
           onClick={() => console.log("Start Project clicked")}
@@ -28,8 +28,8 @@ const InteriorDesign = () => {
           <StatItem number="100+" label="Unique Styles" />
         </StatsContainer>
       </ContentSection>
-      <ImageSection />
-    </MainContainer>
+      <ImageSection images={data[0].images} />
+      </MainContainer>
   );
 };
 
@@ -37,7 +37,7 @@ const MainContainer = styled.main`
   max-width: 1218px;
   margin: 0 auto;
   padding: 75px 0;
-  position: relative;
+  position: abosolute;
   display: flex;
   justify-content: space-between;
   @media (max-width: 991px) {
@@ -47,7 +47,7 @@ const MainContainer = styled.main`
 `;
 
 const ContentSection = styled.section`
-  max-width: 760px;
+  width: 760px;
   padding-left: 8px;
   @media (max-width: 991px) {
     max-width: 100%;
@@ -56,8 +56,9 @@ const ContentSection = styled.section`
 
 const Title = styled.h1`
   font-family: "Inter", sans-serif;
-  font-size: 90px;
+  font-size: 65px;
   font-weight: 800;
+  line-height:70px;
   color: #000;
   margin: 0 0 42px 0;
   @media (max-width: 991px) {

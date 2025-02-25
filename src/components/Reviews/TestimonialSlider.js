@@ -28,7 +28,7 @@ const TestimonialSlider = () => {
               speed={3000}
               slidesPerView={1}
               loop
-              autoplay={{ delay: 1500, disableOnInteraction: false }} // set delay, etc.
+              autoplay={{ delay: 1000, disableOnInteraction: false }} // set delay, etc.
               keyboard={{ enabled: true, onlyInViewport: true }}
               effect="slide"
             >

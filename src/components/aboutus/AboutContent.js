@@ -27,7 +27,7 @@ const ContentWrapper = styled.div`
   border: 1px solid rgba(151, 151, 151, 1);
   display: flex;
   margin-top: auto;
-  margin-right: -250px;
+  margin-right: -150px;
   margin-bottom: auto;
   padding: 151px 80px;
   flex-direction: column;
@@ -45,11 +45,11 @@ const ContentWrapper = styled.div`
 
 const ContentContainer = styled.div`
   width: 864px;
-  max-width: 100%;
+  max-width: 80%;
 `;
 
 const Description = styled.p`
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 52px;
   margin: 80px 0 32px -2px;

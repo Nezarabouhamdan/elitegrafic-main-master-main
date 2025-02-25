@@ -23,7 +23,7 @@ const HeadingContainer = styled.div`
   max-width: 100%;
   align-items: stretch;
   gap: 40px 78px;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   @media (max-width: 991px) {
     font-size: 40px;

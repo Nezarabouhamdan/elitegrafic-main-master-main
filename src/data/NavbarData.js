@@ -9,7 +9,7 @@ export const data = [
     id: "About us",
   },
   {
-    to: "/",
+    to: "/ProjectManagement",
     text: "Project Management",
     id: "",
   },

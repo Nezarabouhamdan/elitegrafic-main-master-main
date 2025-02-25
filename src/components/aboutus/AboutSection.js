@@ -35,7 +35,7 @@ const ContentColumn = styled.div`
   flex-direction: column;
   align-items: stretch;
   line-height: normal;
-  width: 55%;
+  width: 45%;
   margin-left: 0px;
   @media (max-width: 991px) {
     width: 100%;
@@ -47,10 +47,10 @@ const ImageColumn = styled.div`
   flex-direction: column;
   align-items: stretch;
   line-height: normal;
-  width: 45%;
+  width: 50%;
   margin-left: 20px;
   @media (max-width: 991px) {
-    width: 100%;
+    width: 94%;
   }
 `;
 

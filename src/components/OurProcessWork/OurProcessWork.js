@@ -12,7 +12,7 @@ const OurProcessWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 30%;
-  margin: 0 auto;
+  margin: 0 0;
   
   @media (max-width: 768px) {
     width: 100%;

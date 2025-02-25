@@ -18,6 +18,7 @@ import ServicesSection from "../components/Ser/ServicesSection";
 import RotatingTextCircle from "../components/Ser/RotatingTextCircle";
 import AboutSection from "../ss";
 import ProfileSection from "../components/Profilesection";
+import ProcesSection from "../components/figma2/ProcessSection";
 
 // Column Styles
 const Column = styled.div`
@@ -149,7 +150,8 @@ function ServicesPage() {
       <GlobalStyle />
       <AboutSection/>
       <ServicesSection />
-   <ProfileSection/>
+      <ProcesSection/>
+
       <LeftIcons>
         <Icon href="https://facebook.com" target="_blank">
           <FaFacebook />

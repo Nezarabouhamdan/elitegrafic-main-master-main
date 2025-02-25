@@ -9,10 +9,11 @@ function Process() {
   return (
     <><Container>
        <Title>
-          <h2 className="fsz-45" style={{fontFamily: "Inter",}}>Our Process Work</h2>
+          <h2 className="fsz-45" style={{fontFamily: "Inter",marginTop:'100px'}}>Our Process Work</h2>
         </Title>
     <Row>
-    <OurProcessWork panels={StepsData} button={true}/><img height='550px'src={img} width={'22%' }style={{borderRadius:'20px' ,    transform: 'rotate(15deg)'}}></img>
+    <OurProcessWork panels={StepsData} button={true}/>
+    <img src={img} width={'18%' }style={{borderRadius:'20px' ,  height:'500px',  transform: 'rotate(15deg)'}}></img>
     </Row>
     </Container>
     </>

@@ -27,6 +27,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+     @media (max-width: 991px) {
+    flex-direction:column;
+
+  }
 `;
 
 // Rotating text container
@@ -63,6 +67,11 @@ width:30%;
   font-weight: 400;
   color: #000;
   line-height: 180%;
+   @media (max-width: 991px) {width:80%;
+
+     font-size: 1rem;
+
+  }
 `;
 
 // Statistics container

@@ -2,7 +2,7 @@ import React from 'react'
 import InteriorDesign from '../components/InteriorDesign/InteriorDesign'
 import { Herosection,Heroimg } from './Faqs';
 import img2 from '../assets/faq.jpg'
-import PrimenestFeature from '../components/figma5/PrimenestFeature';
+import PrimenestFeature from '../components/Find Your Dream Home/PrimenestFeature';
 
 const data = [
     {

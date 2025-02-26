@@ -3,7 +3,7 @@ import Hero from '../components/Hero/Hero'
 import FeaturedProjects from '../components/Featured Projects/FeaturedProjects'
 import LatestProjects from '../components/Latest Projects/LatestProjects'
 import PaginatedList from '../components/Pagitionsection/Pagitionsection'
-import AboutSection2 from '../components/figma6/AboutSection'
+import AboutSection2 from '../components/Our Commitment/AboutSection'
 
 function Projectspage() {
   return (

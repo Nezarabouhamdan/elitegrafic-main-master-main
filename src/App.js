@@ -11,7 +11,6 @@ import Projectspage from "./Page/Projectspage";
 import Faqs from "./Page/Faqs";
 import ServicesPage from "./Page/ServicesPage";
 import Aboutus from "./Page/Aboutus";
-import Smooth from "./components/Codepen/Smooth";
 import Architecture from "./Page/Architecture";
 import ProjectManagement from "./Page/Projectmangment";
 import Contact from "./Page/Contact";
@@ -22,8 +21,9 @@ import Interiordesgin from "./Page/Interiordesgin";
 import Landscaping from "./Page/Landscaping";
 import Productpage from "./Page/Productpage";
 function App() {
-  return (
-    <BrowserRouter>
+  return (   
+
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Globalstyle />
       
       <Navbar />
@@ -36,7 +36,6 @@ function App() {
         <Route exact path="/Faq" component={Faqs}></Route>
         <Route exact path="/service" component={ServicesPage}></Route>
         <Route exact path="/Aboutus" component={Aboutus}></Route>
-        <Route exact path="/s" component={Smooth}></Route>
         <Route exact path="/Architecture" component={Architecture}></Route>
         <Route exact path="/ProjectManagement" component={ProjectManagement}></Route>
         <Route exact path="/Developmentplaning" component={DevelpomentPlaning}></Route>

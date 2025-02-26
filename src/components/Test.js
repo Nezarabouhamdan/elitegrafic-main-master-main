@@ -1,5 +1,4 @@
 import React from 'react'
-import AboutSection2 from './Our Commitment/AboutSection'
 import InfoSection from './Info/AboutSection'
 
 

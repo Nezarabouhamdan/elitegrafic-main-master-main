@@ -128,10 +128,13 @@ const ContentWrapper = styled.div`
 `;
 
 const TextSection = styled.div`
-  width: 616px;
+  width: 500px;
 
   @media (max-width: 991px) {
     width: 100%;
+    margin-bottom: 40px;
+  } @media (max-width: 1200px) {  width: 500px;
+
     margin-bottom: 40px;
   }
 `;
@@ -293,7 +296,9 @@ const MainImage = styled.img`
   top: 61px;
   border-radius:20px;
   object-fit: cover;
-
+@media (max-width: 1200px) {   width: 350px;
+  height: 350px;
+  }
   @media (max-width: 991px) {
     position: relative;
     width: 100%;

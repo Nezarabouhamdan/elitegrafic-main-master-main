@@ -45,6 +45,14 @@ export const Title = styled.div`
     font-size: 45px;
     margin: 0;
   }
+       @media (max-width: 968px) {
+         margin-bottom:00px;
+
+         h2 {
+    font-size: 30px;
+    margin: 0;
+  }
+  }
 `;
 const TabsLinksWrapper = styled.div`
   margin-bottom: 50px;
@@ -139,14 +147,21 @@ border-top-right-radius: 20px 20px;
       transform: translateY(0);
     }
   }
+       @media (max-width: 968px) {
+       height: 100%;
+  }
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
   height: 70%;
-      border-radius: 20px;
-
+  border-radius: 20px;
   object-fit: fill;
+   @media (max-width: 968px) {
+       height: 40%;
+  }
+  
+  
 `;
 const ProjectInfo = styled.div`
   padding: 15px;
@@ -167,10 +182,16 @@ const ProjectTitle = styled.h3`
     color: #333;
     text-decoration: none;
   }
+    @media (max-width: 968px) {
+  font-size: 15px;
+  }
 `;
 const ProjectText = styled.div`
   font-size: 14px;
   color: #666;
+   @media (max-width: 968px) {
+  font-size: 10px;
+  }
 `;
 
 const FeaturedProjects = () => {

@@ -33,7 +33,7 @@ const StyledSection = styled.section`
   display: flex;
   padding-left: 80px;
   padding-right: 80px;
-  padding-top: 11px;
+  padding-top: 45px;
   flex-direction: column;
   overflow: hidden;
   align-items: center;

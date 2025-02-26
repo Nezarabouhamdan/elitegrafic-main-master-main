@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 
 
-const StyledButton = styled.button`
+const StyledButton = styled.a`
   display: flex;
   align-items: center;
   gap: 15px;
@@ -21,7 +21,7 @@ const StyledButton = styled.button`
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease;
-
+text-decoration:none;
   &:hover {
     background-color: rgba(92, 145, 8, 1);
   }
@@ -54,7 +54,7 @@ const ButtonIcon = styled.img`
 
 export const CTAButton = ({ children, onClick }) => {
   return (
-    <StyledButton  aria-label="Contact us">
+    <StyledButton  href="/contact"  aria-label="Contact us">
       <ButtonText>{children}</ButtonText>
       <ButtonIcon
         loading="lazy"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import { ProjectCard, ProjectImage, ProjectInfo } from './LatestProjectsStyles';
+import { ProjectCard, ProjectImage, ProjectInfo ,ProjectTags} from './LatestProjectsStyles';
 
 const ProjectSwiper = ({ projects }) => (
   <div className="projects-wrapper">
@@ -21,11 +21,11 @@ const ProjectSwiper = ({ projects }) => (
               <ProjectImage src={project.image} alt={project.title} />
             </a>
             <ProjectInfo>
-              <div className="tags">
+              <ProjectTags>
                 {project.tags.map((tag, index) => (
                   <a key={index} href="#">{tag}</a>
                 ))}
-              </div>
+              </ProjectTags>
               <h3>{project.title}</h3>
               <div>{project.text}</div>
             </ProjectInfo>

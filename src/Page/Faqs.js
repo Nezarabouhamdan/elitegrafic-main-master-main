@@ -9,8 +9,8 @@ import styled from 'styled-components'
 import { Section } from '../Globalstyles'
 export const Row = styled.div`
   display: flex;
-  flex-directions:row;
-   justify-content: center;
+  flex-direction:row;
+   justify-content: space-evenly;
       align-content:center;
       align-items:center;
 
@@ -60,11 +60,15 @@ export const Heroimg = styled.img`
 `;
 const ResponsiveImage = styled.img`
   width: 25%;
-  height: 450px;
+  height: 350px;
   border-radius: 20px;
   transform: rotate(5deg);
   object-fit: cover;
 
+  @media (max-width: 1200px) {
+   width: 35%;
+
+  }
   @media (max-width: 768px) {
     width: 80%;
     height: auto;
@@ -83,11 +87,11 @@ function Faqs(){
     <Head >Frequently Asked Questions
     </Head>
    </Herosection>
-   <Section><Row>
-    <OurProcessWork panels={Faqdata}  button={false}/>
-    <ResponsiveImage src={img} alt="Responsive" style={{marginRight:'250px'}}/>
+ <Row >
+    <OurProcessWork panels={Faqdata}  button={false} />
+    <ResponsiveImage src={img} alt="Responsive" />
     {/* <img height='450px'src={img} width={'25%' }style={{borderRadius:'20px' ,    transform: 'rotate(5deg)'}}></img> */}
-    </Row></Section>
+    </Row>
     </>
 
   )

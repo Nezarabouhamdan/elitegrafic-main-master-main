@@ -1,8 +1,7 @@
 import React from 'react'
 import { Heroimg, Herosection } from './Faqs'
 import img2 from '../assets/faq.jpg'
-import ContactForm from '../components/figcontact/ContactForm'
-import Productpage from './Productpage'
+import ContactForm from '../components/Contact/ContactForm'
 function Contact() {
   return (
     <div>  <Herosection>
@@ -18,7 +17,6 @@ width="70%" height="700px" style={{marginTop:'70px',marginBottom:'70PX'}}
 loading="lazy">
 </iframe>
 </div>
-<Productpage/>
 </div>
   )
 }

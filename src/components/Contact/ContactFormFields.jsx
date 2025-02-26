@@ -32,7 +32,7 @@ const FormContent = styled.form`
 
 const InputRow = styled.div`
   display: flex;
-  gap: 139px;
+  gap: 35px;
   flex-wrap: wrap;
 
   @media (max-width: 991px) {

@@ -180,7 +180,7 @@ const servicesData = [
     imgSrc: img2,
     description:
       "Interior Design, Exterior Design, Renovation, Sustainable Design, Installation, Plumbing System, 3D Experience",
-      href:'InteriorandExteriorDesign'
+      href:'InteriorDesign'
 
   },
   {
@@ -200,7 +200,7 @@ const servicesData = [
     title: "Engineering Consultancy",
     imgSrc: img,
     description: "Project Analysis, Bid Documentation, Construction Supervisor",
-    href:'EngineeringConsulting'
+    href:'EngineeringConsultancy'
 
   },
 ];

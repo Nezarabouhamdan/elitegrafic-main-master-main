@@ -35,7 +35,7 @@ export const ImageSection = ({images}) => {
         effect="slide"
       >
         {slides.map((slideImages, index) => (
-          <SwiperSlide key={index} style={{ height: '70vh' }}>
+          <SwiperSlide key={index} style={{ height: '70vh',display:"flex",flexDirection:'column' }}>
             <TopImage
               src={slideImages[0]}
               alt={`Slide ${index + 1} - Top Image`}
@@ -62,7 +62,7 @@ const StyledImageSection = styled.section`
     height:100%;
     width:40vw;
 @media (max-width: 991px) {
-    width:100vw;
+    width:95vw;
 
     margin-top: 60px;
     display: flex;
@@ -78,7 +78,9 @@ const TopImage = styled.img`
   object-fit: cover;
   margin-left: 196px;
   @media (max-width: 991px) {
-    width: 500px;
+     width:100vw;
+ margin-left: 06px;
+
     height: 50vh;
     position: static;
   }
@@ -96,7 +98,8 @@ const BorderBox = styled.div`
   left:20px;
   top: 300px;
   @media (max-width: 991px) {
-    display: none;
+    display: none; left:0px;
+  top: 00px;
   }
 `;
 
@@ -110,7 +113,9 @@ margin-top:90px;
   left:40px;
   top: 230px;
   @media (max-width: 991px) {
-     width: 500px;
+    left:0px;
+  top: 0px;
+     width:100vw;
     height: 50vh;
   
     position: static;

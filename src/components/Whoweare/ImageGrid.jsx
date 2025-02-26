@@ -62,7 +62,7 @@ const ImageColumn = styled.div`
 `;
 
 const StyledImage = styled.img`
-  aspect-ratio: 0.82;
+  aspect-ratio: 1;
   object-fit: contain;
   object-position: center;
   width: 100%;

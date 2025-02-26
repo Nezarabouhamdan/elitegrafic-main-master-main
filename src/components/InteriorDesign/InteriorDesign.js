@@ -50,7 +50,9 @@ const ContentSection = styled.section`
   width: 760px;
   padding-left: 8px;
   @media (max-width: 991px) {
-    max-width: 100%;
+    width: 95vw;
+
+   
   }
 `;
 

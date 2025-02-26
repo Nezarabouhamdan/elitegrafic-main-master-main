@@ -7,17 +7,26 @@ import "slick-carousel/slick/slick-theme.css";
 import img from "../../assets/pool.jpeg";
 import img2 from "../../assets/interior.jpg";
 import img3 from "../../assets/villa.jpeg";
-import { Button, Row } from "../../Globalstyles";
+import { Button } from "../../Globalstyles";
+import { Link } from "react-router-dom";
 
-// Define breakpoints for responsive design
 const breakpoints = {
-  xs: 0, // Extra small devices (phones)
-  sm: 600, // Small devices (tablets)
-  md: 960, // Medium devices (small laptops)
-  lg: 1280, // Large devices (desktops)
+  xs: 0, 
+  sm: 600, 
+  md: 960, 
+  lg: 1280, 
 };
 
-// Styled-components for Slider and its elements
+const Row=styled.div`  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly; 
+   @media screen and (max-width: 968px) {
+   
+     flex-direction:column;
+  }   @media screen and (max-width: 1200px) {
+   
+  justify-content: center; 
+  } ;`
 const SliderWrapper = styled.div`
   width: 100%;
   overflow: hidden;
@@ -62,22 +71,36 @@ const StyledSlider = styled(Slider)`
     overflow: hidden;
   }
 
-  .slick-prev,
-  .slick-next {
-    z-index: 2;
-    width: 50px;
-    height: 50px;
-    &:before {
-      font-size: 50px;
-      color: #fff;
-    }
-  }
+
 
   .slick-dots {
     bottom: 20px;
   }
 `;
+const ContentColumn=styled.div`
+                  
+                      width: 400px;
+                      margin-right: -100px;
+                      margin-top: 430px;
+                      height: 100%;
 
+                        @media screen and (max-width: 968px) {
+                                              margin-right: 00px;
+
+             width: 70vw; /* Set the container's width to 70% of its parent */
+  overflow-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+  word-wrap: break-word; 
+
+                        display:flex;
+                        flex-direction:column;
+                        justify-content:center;
+                        align-items:center;
+                        align-content:center;
+                                              margin-top: 40px;
+
+   
+  } 
+                      `
 const SlideContent = styled.div`
   position: absolute;
   top: 50%;
@@ -91,11 +114,33 @@ const SlideContent = styled.div`
 const SlideImage = styled.img`
   width: 100vw;
   object-fit: fill;
+      @media (max-width: 968px) {
+        object-fit: cover;
+
+    width: 100%;
+    height: 230vw;
+ 
+  }
+      @media (max-width: 968px) {
+        object-fit: cover;
+
+    width: 100%;
+    height: 230vw;
+ 
+  }
 `;
 
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+          margin-top: 10%;
+   @media (max-width: 1200px) {
+    margin-right: -200px;
+  }
+      @media (max-width: 968px) {
+        margin-top: 0;
+    margin-right: 0;
+  }
 `;
 
 const Counter = styled.div`
@@ -107,7 +152,6 @@ const Counter = styled.div`
   z-index: 2;
 `;
 
-// Responsive typography and layout adjustments
 const Title = styled.h1`
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -117,19 +161,29 @@ const Title = styled.h1`
   margin-right: 160px;
 
   @media (max-width: ${breakpoints.lg}px) {
-    font-size: 150px;
-  }
 
-  @media (max-width: ${breakpoints.md}px) {
-    font-size: 120px;
-  }
-
-  @media (max-width: ${breakpoints.sm}px) {
     font-size: 100px;
   }
 
-  @media (max-width: ${breakpoints.xs}px) {
-    font-size: 80px;
+  @media (max-width: ${breakpoints.md}px) {
+    text-align: center;
+  margin-top: 50px;
+  margin-right: 0px;
+    font-size: 70px;
+  }
+
+  @media (max-width: ${breakpoints.sm}px) {  margin-top: 50px;
+  margin-right: 0px;
+      text-align: center;
+
+    font-size: 50px;
+  }
+
+  @media (max-width: ${breakpoints.xs}px) {  margin-top: 50px;
+  margin-right: 0px;
+      text-align: center;
+
+    font-size: 30px;
   }
 `;
 
@@ -155,12 +209,19 @@ const Subtitle = styled.h5`
     font-size: 16px;
   }
 `;
-
+const TextContianer=styled.div`  font-family: "Inter";
+                        text-align: left;
+                        width: 700px;
+                        height: 200px;
+                        @media (max-width: 968px) {
+     width: 100%;
+                        `
 const Paragraph = styled.p`
   font-family: "Inter ExtraLight", sans-serif;
   font-size: 17px;
   text-align: left;
   margin-top: 20px;
+            white-space: pre-wrap;
 
   @media (max-width: ${breakpoints.lg}px) {
     font-size: 15px;
@@ -177,6 +238,8 @@ const Paragraph = styled.p`
   @media (max-width: ${breakpoints.xs}px) {
     font-size: 11px;
   }
+
+
 `;
 
 const HeroSlider = () => {
@@ -192,8 +255,7 @@ const HeroSlider = () => {
     autoplaySpeed: 3000,
     rtl: false,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+
   };
 
   const slides = [
@@ -240,59 +302,29 @@ const HeroSlider = () => {
               {" "}
               <SlideContent>
                 <Row>
-                  <Column style={{ marginTop: "430px", marginRight: "160px" }}>
-                    <div
-                      style={{
-                        fontFamily: "Inter",
-                        fontSize: "200px",
-                        textAlign: "left",
-                        width: "800px",
-                        height: "200px",
-                      }}
+                  <Column >
+                    <TextContianer
+                   
                     >
-                      {" "}
-                      <h1
-                        style={{
-                          fontFamily: "Inter",
-                          fontSize: "200px",
-                          textAlign: "left",
-                          width: "100%",
-                        }}
-                      >
-                        {" "}
-                        {slide.title}
-                      </h1>
-                    </div>
+                     <Title>                        {slide.title}
+                     </Title>
+                    </TextContianer>
 
-                    <h5
-                      style={{
-                        textAlign: "left",
-                        fontFamily: "Inter ExtraLight",
-                        fontSize: "30px",
-                      }}
+                    <Subtitle
+                     
                     >
                       {slide.subtitle}
-                    </h5>
+                    </Subtitle>
                   </Column>
-                  <Column
-                    style={{
-                      backgroundColor: "none",
-                      width: "400px",
-                      marginRight: "-100px",
-                      marginTop: "430px",
-                      height: "100%",
-                    }}
+                  <ContentColumn
+               
                   >
-                    <p
-                      style={{
-                        fontFamily: "Inter ExtraLight",
-                        fontSize: "17px",
-                        textAlign: "left",
-                      }}
+                    <Paragraph
+                 
                     >
                       {slide.content}
-                    </p>
-                    <Button
+                    </Paragraph>
+                    <a style={{  textDecoration: 'none'}}href='/service'>   <Button
                       style={{
                         padding: "15px 40px",
                         position: "relative",
@@ -300,10 +332,12 @@ const HeroSlider = () => {
                         borderRadius: "50rem",
                         border: "1px solid #dee2e6",
                       }}
+                      
                     >
                       Our Services
-                    </Button>
-                  </Column>
+                    </Button></a>
+                 
+                  </ContentColumn>
                 </Row>
               </SlideContent>
             </AnimatedSlideContent>
@@ -311,29 +345,6 @@ const HeroSlider = () => {
         ))}
       </StyledSlider>
     </SliderWrapper>
-  );
-};
-
-// Custom arrow components
-const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", right: "25px" }}
-      onClick={onClick}
-    />
-  );
-};
-
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", left: "25px", zIndex: 1 }}
-      onClick={onClick}
-    />
   );
 };
 

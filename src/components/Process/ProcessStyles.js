@@ -6,6 +6,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: space-around;
   @media screen and (max-width: 968px) {
-    height: 30vh;
+    justify-content: center;
+  align-items: center;
+  height: 140vh;
   }
 `;

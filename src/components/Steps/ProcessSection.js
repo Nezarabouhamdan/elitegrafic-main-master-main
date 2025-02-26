@@ -112,6 +112,8 @@ const StepsContent = styled.div`
 `;
 
 const RightColumn = styled.div`
+display:grid;
+place-items:center;
   flex: 1;
 `;
 

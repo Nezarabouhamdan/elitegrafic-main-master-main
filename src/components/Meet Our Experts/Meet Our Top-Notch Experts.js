@@ -3,13 +3,13 @@
 
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import img from '../assets/team3.jpg'
-import img2 from '../assets/team2.jpg'
-import img3 from '../assets/team4.jpg'
-import img4 from '../assets/team5.jpg'
-import img5 from '../assets/team6.jpg'
-import img6 from '../assets/team7.jpg'
-import img1 from '../assets/team1.jpg'
+import img from '../../assets/team3.jpg'
+import img2 from '../../assets/team2.jpg'
+import img3 from '../../assets/team4.jpg'
+import img4 from '../../assets/team5.jpg'
+import img5 from '../../assets/team6.jpg'
+import img6 from '../../assets/team7.jpg'
+import img1 from '../../assets/team1.jpg'
 
 // Animation for initial load (optional)
 const zoomInAnim = keyframes`
@@ -43,12 +43,22 @@ const Title = styled.h2`
   font-size: 45px;
   margin-bottom: 80px;
   text-align: left;
+   @media (max-width: 968px) {
+     text-align: center;
+
+  font-size: 35px;
+  }
+  
 `;
 
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
+  @media (max-width: 968px) {
+    flex-direction:column;
+  }
 `;
 
 // Column for grid layout
@@ -58,6 +68,11 @@ const Column = styled.div`
   padding: 0 15px;
   box-sizing: border-box;
   margin-bottom: 30px;
+    @media (max-width: 968px) {
+      max-width: 100%;
+
+width:100%;
+  }
 `;
 
 // Team card link with load animation
@@ -129,6 +144,11 @@ const NumberCard = styled.div`
   animation: ${zoomInAnim} 0.5s forwards;
   animation-delay: ${props => props.delay || '0s'};
   opacity: 0;
+    @media (max-width: 968px) {
+
+width:100%;
+  }
+  
 `;
 
 const NumberPerc = styled.h3`

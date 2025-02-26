@@ -1,13 +1,9 @@
 import React from "react";
 import {
-  Colored,
-  Head,
   Head2,
   Head3,
   Heroimg,
   Herosection,
-  Image,
-  Imagediv,
   Textdiv,
   Underline,
   Underlinev,
@@ -22,6 +18,10 @@ import '../../App.css'
 
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+import styled from "styled-components";
+const Statics=styled.p`
+font-family:inter ;margin-top:20px,font-size:'20px'
+`
 export default function Hero() {
   const initial = { opacity: 0, y: -20 };
   const animation = useAnimation();
@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <Herosection ref={ref}>
       <Heroimg src={img} />
-      <Textdiv style={{marginTop:'200px'}}>
+      <Textdiv style={{marginTop:'100px'}}>
 <Head2><p>Designs That Speak: </p></Head2>
 <br></br>
 <Underline style={{marginTop:'10px'}}></Underline>
@@ -59,8 +59,8 @@ export default function Hero() {
                         postFix=""
                       />
                     ) : null}{" "}
-                    <p style={{fontFamily:'inter ',marginTop:'20px',fontSize:'30px'}}> Years Of Experience
-                    </p>
+                    <Statics > Years Of Experience
+                    </Statics>
                   </div>
                 )}
         </VisibilitySensor><Underlinev></Underlinev>
@@ -76,7 +76,7 @@ export default function Hero() {
                         postFix="%"
                       />
                     ) : null}{" "}
-                    <p style={{fontFamily:'inter ',marginTop:'20px',fontSize:'30px'}}> Quality</p>
+                    <Statics > Quality</Statics>
                   </div>
                 )}
         </VisibilitySensor>
@@ -94,9 +94,8 @@ export default function Hero() {
                         postFix=""
                       />
                     ) : null}{" "}
-                    <p style={{ fontWeight: '1000',
-  fontFamily: "Inter ExtraLight",marginTop:'20px',fontSize:'30px'}}> Happy Clients
-                    </p>
+                    <Statics> Happy Clients
+                    </Statics>
                   </div>
                 )}
         </VisibilitySensor>

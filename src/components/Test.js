@@ -1,6 +1,6 @@
 import React from 'react'
-import AboutSection2 from './figma6/AboutSection'
-import InfoSection from './figmainfo/AboutSection'
+import AboutSection2 from './Our Commitment/AboutSection'
+import InfoSection from './Info/AboutSection'
 
 
 

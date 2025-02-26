@@ -1,7 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { GlobalStyle } from "../components/WhatweOffer/Globalstylewhat";
-import Offerings from "../components/WhatweOffer/Whatweoffer";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPinterest, FaCartArrowDown, FaShoppingCart } from "react-icons/fa";
 import {
   Herosection,
   Heroimg,
@@ -13,12 +11,10 @@ import {
 } from "../components/Hero/Herostyles";
 import img from "../assets/Services.jpg";
 import styled from "styled-components";
-import ArchitectureSection from "../components/Allservices/Allservices";
-import ServicesSection from "../components/Ser/ServicesSection";
-import RotatingTextCircle from "../components/Ser/RotatingTextCircle";
+import ServicesSection from "../components/Ourservices/ServicesSection";
+import RotatingTextCircle from "../components/Ourservices/RotatingTextCircle";
 import AboutSection from "../ss";
-import ProfileSection from "../components/Profilesection";
-import ProcesSection from "../components/figma2/ProcessSection";
+import ProcesSection from "../components/Steps/ProcessSection";
 
 // Column Styles
 const Column = styled.div`
@@ -35,7 +31,7 @@ const Row = styled.div`
   width: 70vw;
   display: flex;
   flex-direction: row;
-  gap: 15rem;
+  gap: 1rem;
   justify-content: space-around;
   align-items: space-around;
   @media (max-width: 768px) {
@@ -62,7 +58,7 @@ const Headings = styled.h2`
   }
 `;const Heading = styled.h2`
  
-font-size: 8rem;
+font-size: 7rem;
 color: #fff;
 
 .green {
@@ -88,15 +84,15 @@ const IconWrapper = styled.div`
   }
 `;
 
-const LeftIcons = styled(IconWrapper)`
+export const LeftIcons = styled(IconWrapper)`
   left: 50px;
 `;
 
-const RightIcons = styled(IconWrapper)`
+export const RightIcons = styled(IconWrapper)`
   right: 50px;
 `;
 
-const Icon = styled.a`
+export const Icon = styled.a`
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 50%;
   padding: 10px;
@@ -147,28 +143,27 @@ function ServicesPage() {
       
         </Textdiv>
       </Herosection>
-      <GlobalStyle />
       <AboutSection/>
       <ServicesSection />
       <ProcesSection/>
 
-      <LeftIcons>
-        <Icon href="https://facebook.com" target="_blank">
-          <FaFacebook />
-        </Icon>
-        <Icon href="https://twitter.com" target="_blank">
-          <FaTwitter />
-        </Icon>
-        <Icon href="https://linkedin.com" target="_blank">
-          <FaLinkedin />
-        </Icon>
-        <Icon href="https://instagram.com" target="_blank">
-          <FaInstagram />
-        </Icon>
-      </LeftIcons>
+  <LeftIcons>
+              <Icon href="https://www.facebook.com/Khales.ae/" target="_blank">
+                <FaFacebook />
+              </Icon>
+              <Icon href="https://www.pinterest.com/khalesae/" target="_blank">
+                <FaPinterest />
+              </Icon>
+              <Icon href="https://www.linkedin.com/company/khales-ae/posts/?feedView=all" target="_blank">
+                <FaLinkedin />
+              </Icon>
+              <Icon href="https://www.instagram.com/khales.ae/" target="_blank">
+                <FaInstagram />
+              </Icon>
+            </LeftIcons>
       <RightIcons>
         <Icon href="https://facebook.com" target="_blank">
-          <FaFacebook />
+          <FaShoppingCart />
         </Icon>
         <Icon href="https://twitter.com" target="_blank">
           <FaTwitter />

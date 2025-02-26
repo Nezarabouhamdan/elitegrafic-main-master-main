@@ -13,10 +13,11 @@ const InputWrapper = styled.div`
 const Label = styled.label`
   color: ${(props) =>
     props.variant === "dark" ? "rgba(0, 0, 0, 1)" : "rgba(141, 141, 141, 1)"};
-  font-size: 12px;
+  font-size: 18px;
   line-height: 2;
   font-family: 'Inter' ;
   font-weight: 500;
+  
 `;
 
 const StyledInput = styled.input`
@@ -49,19 +50,7 @@ const StyledTextarea = styled.textarea`
   }
 `;
 
-const StyledSelect = styled.select`
-  border: none;
-  border-bottom: 1px solid rgba(141, 141, 141, 0.25);
-  padding: 8px 0;
-  font-size: 14px;
-  font-family: 'Inter' ;
-  color: rgba(141, 141, 141, 1);
 
-  &:focus {
-    outline: none;
-    border-bottom-color: rgba(102, 161, 9, 1);
-  }
-`;
 
 const SubmitButton = styled.button`
   border-radius: 5px;

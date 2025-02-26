@@ -46,7 +46,7 @@ export const Textdiv = styled.div`
     width: 80%;
     margin-top: -20%;
     margin-left: 0%;
-
+height:50vh;
     justify-content: center;
     align-items: center;
   }
@@ -94,7 +94,8 @@ export const Head2 = styled(motion.div)`
   flex-direction: column;
 
   padding-bottom: 2px;
-  font-size: 80px;
+  font-size: 60px;
+  line-height:80px;
   font-family: "Inter";
   color: rgb(255, 251, 251);
   font-weight: 700;
@@ -113,7 +114,7 @@ export const Head3 = styled(motion.div)`
   padding-bottom: 15px;
   color: rgb(255, 255, 255);
   @media screen and (max-width: 968px) {
-    font-size: 12px;
+    font-size: 25px;
     padding-top: 50px;
     padding-bottom: 0px;
   }

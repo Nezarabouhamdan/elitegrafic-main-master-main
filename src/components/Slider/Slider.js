@@ -4,9 +4,7 @@ import Slider from "react-slick";
 import styled, { keyframes } from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img from "../../assets/pool.jpeg";
-import img2 from "../../assets/interior.jpg";
-import img3 from "../../assets/villa.jpeg";
+
 import { Button } from "../../Globalstyles";
 import { Link } from "react-router-dom";
 
@@ -261,7 +259,7 @@ const HeroSlider = () => {
   const slides = [
     {
       id: 1,
-      image: img3,
+      image: 'https://i.ibb.co/vG6yCkC/pool-min.jpg',
       title: "archin",
       subtitle: "Architecture Design Studio",
       content:
@@ -269,7 +267,7 @@ const HeroSlider = () => {
     },
     {
       id: 2,
-      image: img2,
+      image: 'https://i.ibb.co/DD7YRfGs/img6-min.jpg',
       title: "time",
       subtitle: "Sustainable Material Resource",
       content:
@@ -277,7 +275,7 @@ const HeroSlider = () => {
     },
     {
       id: 3,
-      image: img,
+      image: 'https://i.ibb.co/ZRdYSptV/interior-min.jpg',
       title: "shape",
       subtitle: "Architecture Language Signature",
       content:

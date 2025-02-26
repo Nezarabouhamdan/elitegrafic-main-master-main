@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaTwitter,
   FaLinkedin,
+  FaPinterest,
 } from "react-icons/fa";
 
 const iconStyle = (Icon) => <Icon />;
@@ -13,23 +14,31 @@ export const footerSocialData = [
   {
     name: "Facebook",
     icon: iconStyle(FaFacebook),
+    link: "https://www.facebook.com/Khales.ae/",
+
   },
   {
     name: "Instagram",
     icon: iconStyle(FaInstagram),
-    link: "https://www.instagram.com/elite.grafic/",
+    link: "https://www.instagram.com/khales.ae/",
   },
   {
-    name: "YouTube",
-    icon: iconStyle(FaYoutube),
+    name: "Pinterest",
+    icon: iconStyle(FaPinterest),
+    link: "https://www.pinterest.com/khalesae/",
+
   },
   {
     name: "Twitter",
     icon: iconStyle(FaTwitter),
+    link: "https://www.linkedin.com/company/khales-ae/posts/?feedView=all",
+
   },
   {
     name: "LinkedIn",
     icon: iconStyle(FaLinkedin),
+    link: "https://www.linkedin.com/company/khales-ae/posts/?feedView=all",
+
   },
 ];
 

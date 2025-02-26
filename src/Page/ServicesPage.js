@@ -112,7 +112,7 @@ function ServicesPage() {
   return (
     <div>
       <Herosection>
-        <Heroimg src={img} />
+        <Heroimg src='https://i.ibb.co/dsWKjZxp/Services.jpg' />
         <Textdiv style={{ marginTop: "00px" }}>
           <Row style={{marginTop:'100px'}}>
             <Column>

@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/Khales/static/css/main.f24e2fca.css",
-    "main.js": "/Khales/static/js/main.ea93475b.js",
+    "main.js": "/Khales/static/js/main.8dbf054e.js",
     "static/js/511.bc397514.chunk.js": "/Khales/static/js/511.bc397514.chunk.js",
-    "static/media/interior.jpg": "/Khales/static/media/interior.b6f620cd40826cc7b54c.jpg",
     "static/media/int4.jpg": "/Khales/static/media/int4.a90154857a9881efcf71.jpg",
     "static/media/int2.jpg": "/Khales/static/media/int2.74402c21ff9229565e07.jpg",
     "static/media/int3.jpg": "/Khales/static/media/int3.89c87082b03cae2bd8b9.jpg",
@@ -14,7 +13,6 @@
     "static/media/villa.jpeg": "/Khales/static/media/villa.1f6213f4bfd32eae42c5.jpeg",
     "static/media/Projects.jpg": "/Khales/static/media/Projects.b8c6cd7072ccd70f092e.jpg",
     "static/media/villa4.jpeg": "/Khales/static/media/villa4.a2a3a4069eab7f3a9adb.jpeg",
-    "static/media/pool.jpeg": "/Khales/static/media/pool.548d0c22d1c8756eee71.jpeg",
     "static/media/img4.jpeg": "/Khales/static/media/img4.9ebf6c53c87e75b2711b.jpeg",
     "static/media/Inter_18pt-ExtraLight.ttf": "/Khales/static/media/Inter_18pt-ExtraLight.9c52fd6f7cd85eb278b2.ttf",
     "static/media/Inter_18pt-Medium.ttf": "/Khales/static/media/Inter_18pt-Medium.c51b145d8cf66a74cc74.ttf",
@@ -46,11 +44,11 @@
     "static/media/slick.woff": "/Khales/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Khales/index.html",
     "main.f24e2fca.css.map": "/Khales/static/css/main.f24e2fca.css.map",
-    "main.ea93475b.js.map": "/Khales/static/js/main.ea93475b.js.map",
+    "main.8dbf054e.js.map": "/Khales/static/js/main.8dbf054e.js.map",
     "511.bc397514.chunk.js.map": "/Khales/static/js/511.bc397514.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f24e2fca.css",
-    "static/js/main.ea93475b.js"
+    "static/js/main.8dbf054e.js"
   ]
 }

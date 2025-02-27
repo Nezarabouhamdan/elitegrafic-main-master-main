@@ -19,10 +19,12 @@ import Bulidingcontracting from "./Page/Bulidingcontracting";
 import EngineeringConsultancy from "./Page/EngineeringConsultancy";
 import Interiordesgin from "./Page/Interiordesgin";
 import Landscaping from "./Page/Landscaping";
-import Productpage from "./Page/Productpage";
+import Productpage from "./Page/Productpage";    import { GoogleOAuthProvider } from '@react-oauth/google';
+
 function App() {
   return (   
 
+    <GoogleOAuthProvider clientId="148433952091-s2n7r0q6de9q78vrjetkn3gok2o4nt2h.apps.googleusercontent.com">
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Globalstyle />
       
@@ -52,7 +54,7 @@ function App() {
 
       </switch>
       <Footer />
-    </BrowserRouter>
+    </BrowserRouter></GoogleOAuthProvider>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroSlider from "../components/Slider/Slider";
 import FeaturedProjects from "../components/Featured Projects/FeaturedProjects";
 import Process from "../components/Process/Process";
@@ -8,9 +8,13 @@ import CTASection from "../components/Homecontact/CTASection";
 import BespokeDesign from "../components/Bespoke/BespokeDesign";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPinterest, FaShoppingCart } from "react-icons/fa";
 import { Icon, LeftIcons,RightIcons } from "./ServicesPage";
+import { GoogleLogin, googleLogout, useGoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
+import { Button } from "../Globalstyles";
 
 
 function Home() {
+  const [Token,SetToken]=useState('')
   return (
     <>
       <HeroSlider />

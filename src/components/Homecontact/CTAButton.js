@@ -1,11 +1,12 @@
 "use client";
 
 import * as React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
 
-const StyledButton = styled.a`
+const StyledButton = styled(Link)`
   display: flex;
   align-items: center;
   gap: 15px;
@@ -54,7 +55,7 @@ const ButtonIcon = styled.img`
 
 export const CTAButton = ({ children, onClick }) => {
   return (
-    <StyledButton  href="/contact"  aria-label="Contact us">
+    <StyledButton  to={"/contact"}  aria-label="Contact us">
       <ButtonText>{children}</ButtonText>
       <ButtonIcon
         loading="lazy"

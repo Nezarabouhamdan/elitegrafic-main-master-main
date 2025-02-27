@@ -4,6 +4,7 @@ import img from "../../assets/arch1.jpeg";
 import img2 from "../../assets/img5.jpeg";
 import img3 from "../../assets/v6.jpeg";
 import "./c.css";
+import { Link } from "react-router-dom";
 // SECTION & CONTAINER
 const Section = styled.section`
   padding: 80px 15px;
@@ -45,7 +46,7 @@ const StyledSvg = styled.svg`
   border-left: 2px solid #666;
 `;
 // SERVICE CARD
-const ServiceCard = styled.a`
+const ServiceCard = styled(Link)`
   display: block;
   position: relative;
   text-decoration: none;
@@ -171,7 +172,7 @@ const servicesData = [
     imgSrc: img,
     description:
       "Planning, 3D Visualization, Landscape Design, Structural Drawing, CGI, Construction Supervision",
-      href:'Architecture'
+      href:'/Architecture'
   },
   {
     id: 2,
@@ -180,7 +181,7 @@ const servicesData = [
     imgSrc: img2,
     description:
       "Interior Design, Exterior Design, Renovation, Sustainable Design, Installation, Plumbing System, 3D Experience",
-      href:'InteriorDesign'
+      href:'/InteriorDesign'
 
   },
   {
@@ -190,7 +191,7 @@ const servicesData = [
     imgSrc: img3,
     description:
       "Bespoke Furniture, Material Supply, Online Store, Distribute, 3D Modeling",
-            href:'ProjectManagement'
+            href:'/ProjectManagement'
 
 
   },
@@ -200,7 +201,7 @@ const servicesData = [
     title: "Engineering Consultancy",
     imgSrc: img,
     description: "Project Analysis, Bid Documentation, Construction Supervisor",
-    href:'EngineeringConsultancy'
+    href:'/EngineeringConsultancy'
 
   },
 ];
@@ -214,7 +215,7 @@ const ServicesSection = () => {
         </TitleWrapper>
         <ServicesGrid>
           {servicesData.map((service) => (
-            <ServiceCard href={service.href} key={service.id}>
+            <ServiceCard to={service.href} key={service.id}>
               <div className="icon">
                 <i className={service.iconClass}></i>
               </div>

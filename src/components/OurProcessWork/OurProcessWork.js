@@ -120,7 +120,7 @@ function OurProcessWork({ panels ,button},) {
         ))}
       </StyledAccordion>
       {button === true &&
-      <AllProjectsLink href='/projects' style={{marginTop:'50px'}}>Our Projects</AllProjectsLink>
+      <AllProjectsLink to={'/projects'} style={{marginTop:'50px'}}>Our Projects</AllProjectsLink>
       }
   
     </OurProcessWrapper>

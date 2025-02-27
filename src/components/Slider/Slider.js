@@ -322,7 +322,7 @@ const HeroSlider = () => {
                     >
                       {slide.content}
                     </Paragraph>
-                    <a style={{  textDecoration: 'none'}}href='/service'>   <Button
+                  <Link to={'/service'}><Button
                       style={{
                         padding: "15px 40px",
                         position: "relative",
@@ -333,7 +333,7 @@ const HeroSlider = () => {
                       
                     >
                       Our Services
-                    </Button></a>
+                    </Button></Link>
                  
                   </ContentColumn>
                 </Row>

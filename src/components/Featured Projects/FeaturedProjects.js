@@ -18,7 +18,7 @@ import arc2 from '../../assets/arch2.jpeg'
 import arc3 from '../../assets/arch3.jpeg'
 import arc4 from '../../assets/arch4.jpeg'
 import { useInView } from 'react-intersection-observer';
-
+import { Link } from 'react-router-dom';
 SwiperCore.use([Navigation, Pagination]);
 
 const Section = styled.section`
@@ -84,7 +84,7 @@ const NavPills = styled.ul`
     }
   }
 `;
-const AllProjectsLink = styled.a`
+const AllProjectsLink = styled(Link)`
   display: inline-block;
   border: 1px solid #66a109;
   border-radius: 50px;
@@ -319,7 +319,7 @@ const FeaturedProjects = () => {
             ))}
           </NavPills>
           <div>
-            <AllProjectsLink href="/Projects">
+            <AllProjectsLink to={"/Projects"}>
               <span  style={{      fontFamily: "Inter",}}>
                 View All Projects <i className="small ms-1 ti-arrow-top-right"></i>
               </span>

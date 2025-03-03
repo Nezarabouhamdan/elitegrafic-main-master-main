@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Button } from "../../Globalstyles";
 import { Link } from "react-router-dom";
+import { TextAlignCenterIcon } from "@radix-ui/react-icons";
+import useDeviceSize from "../../Page/WindowSize";
 
 const breakpoints = {
   xs: 0, 
@@ -15,14 +17,16 @@ const breakpoints = {
   lg: 1280, 
 };
 
-const Row=styled.div`  display: flex;
+const Row=styled.div` 
+ display: flex;
   flex-direction:row;
-  justify-content: space-evenly; 
+  justify-content: center; 
+  align-content: flex-start;
+  align-items:  flex-start;
+  width:80vw;
    @media screen and (max-width: 968px) {
-   
      flex-direction:column;
   }   @media screen and (max-width: 1200px) {
-   
   justify-content: center; 
   } ;`
 const SliderWrapper = styled.div`
@@ -77,24 +81,29 @@ const StyledSlider = styled(Slider)`
 `;
 const ContentColumn=styled.div`
                   
-                      width: 400px;
+   
                       margin-right: -100px;
-                      margin-top: 430px;
+          margin-top: 30%;
                       height: 100%;
+              width: 20vw;
+@media (max-width: 1200px) {
+                      margin-right: 0px;
 
+              width: 30vw;
+  }
                         @media screen and (max-width: 968px) {
                                               margin-right: 00px;
 
-             width: 70vw; /* Set the container's width to 70% of its parent */
-  overflow-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+                       width: 70vw;
+  overflow-wrap: break-word; 
   word-wrap: break-word; 
 
                         display:flex;
                         flex-direction:column;
-                        justify-content:center;
-                        align-items:center;
-                        align-content:center;
-                                              margin-top: 40px;
+                        justify-content:flex-start;
+                        align-items:flex-start;
+                        align-content:flex-start;
+                                              margin-top: 00px;
 
    
   } 
@@ -131,12 +140,16 @@ const SlideImage = styled.img`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-          margin-top: 10%;
+              width: 55vw;
+          margin-top:30%;
    @media (max-width: 1200px) {
-    margin-right: -200px;
+    width: 40vw;
+    margin-right: 00px;
   }
       @media (max-width: 968px) {
-        margin-top: 0;
+          width: 100vw;
+
+        margin-top: 0px;
     margin-right: 0;
   }
 `;
@@ -155,10 +168,11 @@ const Title = styled.h1`
   text-align: left;
   width: 100%;
   font-size: 200px;
-  margin-top: 430px;
+  margin-top: 0px;
   margin-right: 160px;
 
   @media (max-width: ${breakpoints.lg}px) {
+  margin-right: 0px;
 
     font-size: 100px;
   }
@@ -170,9 +184,9 @@ const Title = styled.h1`
     font-size: 70px;
   }
 
-  @media (max-width: ${breakpoints.sm}px) {  margin-top: 50px;
+  @media (max-width: ${breakpoints.sm}px) {  margin-top: 150px;
   margin-right: 0px;
-      text-align: center;
+      text-align: left;
 
     font-size: 50px;
   }
@@ -189,7 +203,7 @@ const Subtitle = styled.h5`
   text-align: left;
   font-family: "Inter ExtraLight", sans-serif;
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 0px;
 
   @media (max-width: ${breakpoints.lg}px) {
     font-size: 25px;
@@ -244,7 +258,7 @@ const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 2000,
     slidesToShow: 1,
@@ -285,9 +299,10 @@ const HeroSlider = () => {
 
   return (
     <SliderWrapper>
-      <Counter>
+      {useDeviceSize()[0]>'770'?   <Counter>
         {currentSlide + 1} / {slides.length}
-      </Counter>
+      </Counter>:''}
+   
       <StyledSlider {...settings}>
         {slides.map((slide) => (
           <div key={slide.id}>
@@ -324,11 +339,12 @@ const HeroSlider = () => {
                     </Paragraph>
                   <Link to={'/service'}><Button
                       style={{
-                        padding: "15px 40px",
+                      
                         position: "relative",
-                        marginTop: "60px",
+                        marginTop: "30px",
                         borderRadius: "50rem",
                         border: "1px solid #dee2e6",
+                        
                       }}
                       
                     >

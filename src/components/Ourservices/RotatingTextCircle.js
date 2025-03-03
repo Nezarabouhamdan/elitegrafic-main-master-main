@@ -15,6 +15,10 @@ const rotate = keyframes`
 /* A static SVG (no animation here) */
 const ContainerSVG = styled.svg`
   width: 400px;
+    @media (max-width: 968px) {
+      width: 250px;
+
+  }
 `;
 
 /*

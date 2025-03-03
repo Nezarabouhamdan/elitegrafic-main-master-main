@@ -15,6 +15,7 @@ import ServicesSection from "../components/Ourservices/ServicesSection";
 import RotatingTextCircle from "../components/Ourservices/RotatingTextCircle";
 import AboutSection from "../ss";
 import ProcesSection from "../components/Steps/ProcessSection";
+import useDeviceSize from "./WindowSize";
 
 // Column Styles
 const Column = styled.div`
@@ -23,8 +24,10 @@ const Column = styled.div`
  justify-content: left;
   align-items: center;
   @media (max-width: 768px) {
-    justify-content: center;
-    align-items: center;
+    width: 85vw;
+
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 `;
 const Row = styled.div`
@@ -54,7 +57,7 @@ const Headings = styled.h2`
     color: rgb(255, 255, 255);
   }
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `;const Heading = styled.h2`
  
@@ -65,7 +68,7 @@ color: #fff;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 768px) {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 `;
 
@@ -80,16 +83,29 @@ const IconWrapper = styled.div`
   z-index: 10;
 
   @media (max-width: 768px) {
-    top: 80%;
+    flex-direction: row;
+  align-items: center;
+  justify-content: center;
+    top: 90%;
   }
 `;
 
 export const LeftIcons = styled(IconWrapper)`
   left: 50px;
+    @media (max-width: 768px) {
+      left: 22vw;
+
+     top: 100px;
+  }
 `;
 
 export const RightIcons = styled(IconWrapper)`
   right: 50px;
+    @media (max-width: 768px) {
+      right: 22vw;
+
+     bottom: 50px;
+  }
 `;
 
 export const Icon = styled.a`
@@ -127,8 +143,8 @@ function ServicesPage() {
             </Column>
             <RotatingTextCircle  />
           </Row>
-
-          <Column>
+          {useDeviceSize()[0]>'770'?<><Column>
+       
             <Heading>
                 Our 
               </Heading>          
@@ -139,7 +155,8 @@ function ServicesPage() {
               </Heading>
 
               
-            </Column>
+            </Column></>:<> 
+        </>}
       
         </Textdiv>
       </Herosection>

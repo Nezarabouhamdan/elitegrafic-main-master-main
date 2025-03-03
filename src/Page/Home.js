@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeroSlider from "../components/Slider/Slider";
 import FeaturedProjects from "../components/Featured Projects/FeaturedProjects";
 import Process from "../components/Process/Process";
@@ -11,13 +11,21 @@ import { Icon, LeftIcons,RightIcons } from "./ServicesPage";
 import { GoogleLogin, googleLogout, useGoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 import { Button } from "../Globalstyles";
+import AddProduct from "./Addproduct";
+import AppointmentForm from "./appointment";
+import useDeviceSize from "./WindowSize";
 
 
 function Home() {
+
+ console.log() ;
+ 
+
   const [Token,SetToken]=useState('')
   return (
     <>
       <HeroSlider />
+      
          <LeftIcons>
               <Icon href="https://www.facebook.com/Khales.ae/" target="_blank">
                 <FaFacebook />

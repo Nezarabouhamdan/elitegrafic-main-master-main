@@ -108,11 +108,15 @@ const MainContainer = styled.section`
   margin: 0 auto;
   background-color: #fff;
 
-  @media (max-width: 991px) {
+  @media (max-width: 991px) {  max-width: 352px;
+
     padding: 64px 32px;
   }
 
   @media (max-width: 640px) {
+   max-width: 352px;
+  padding: 112px 64px;
+  width: 100%;
     padding: 32px 16px;
   }
 `;
@@ -128,12 +132,13 @@ const ContentWrapper = styled.div`
 `;
 
 const TextSection = styled.div`
-  width: 500px;
+
 
   @media (max-width: 991px) {
-    width: 100%;
+    width: 50%;
     margin-bottom: 40px;
-  } @media (max-width: 1200px) {  width: 500px;
+  } @media (max-width: 1200px) {     width: 50%;
+
 
     margin-bottom: 40px;
   }

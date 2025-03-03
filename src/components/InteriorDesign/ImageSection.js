@@ -77,6 +77,13 @@ const TopImage = styled.img`
   border-radius: 4px;
   object-fit: cover;
   margin-left: 196px;
+    @media (max-width: 1200px) {
+      margin-left: 126px;
+
+   width: 250px;
+  height: 300px;
+   
+  }
   @media (max-width: 991px) {
      width:100vw;
  margin-left: 06px;
@@ -112,6 +119,11 @@ margin-top:90px;
   position: absolute;
   left:40px;
   top: 230px;
+   @media (max-width: 1200px) {
+     width: 305px;
+  height: 301px;
+   
+  }
   @media (max-width: 991px) {
     left:0px;
   top: 0px;

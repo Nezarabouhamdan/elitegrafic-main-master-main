@@ -49,6 +49,12 @@ const MainContainer = styled.main`
 const ContentSection = styled.section`
   width: 760px;
   padding-left: 8px;
+    @media (max-width: 1200px) {
+      width: 560px;
+
+
+   
+  }
   @media (max-width: 991px) {
     width: 95vw;
 
@@ -58,7 +64,7 @@ const ContentSection = styled.section`
 
 const Title = styled.h1`
   font-family: "Inter", sans-serif;
-  font-size: 65px;
+  font-size: 55px;
   font-weight: 800;
   line-height:70px;
   color: #000;
